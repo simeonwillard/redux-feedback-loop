@@ -2,7 +2,7 @@ import { useState } from 'react';
 import { useDispatch } from 'react-redux';
 import { useHistory } from 'react-router-dom';
 
-function StepThree() {
+function StepFour() {
 
     const dispatch = useDispatch();
     const history = useHistory();
@@ -13,10 +13,10 @@ function StepThree() {
     const handleClick = (event) => {
         event.preventDefault();
 
-        const fourthPage = { supported };
+        const fourthPage = { comments };
         dispatch({ type: 'STEP_THREE', payload: fourthPage });
 
-        history.push('/step-four');
+        history.push('/step-five');
     }
 
     return (

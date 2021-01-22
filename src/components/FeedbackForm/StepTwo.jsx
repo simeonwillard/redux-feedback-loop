@@ -13,7 +13,7 @@ function StepTwo() {
     const handleClick = (event) => {
         event.preventDefault();
 
-        const secondPage = { feeling };
+        const secondPage = { understanding };
         dispatch({ type: 'STEP_TWO', payload: secondPage });
 
         history.push('/step-three');

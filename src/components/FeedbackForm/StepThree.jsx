@@ -16,7 +16,7 @@ function StepThree() {
         const thirdPage = { supported };
         dispatch({ type: 'STEP_THREE', payload: thirdPage });
 
-        history.push('/step-three');
+        history.push('/step-four');
     }
 
     return (
