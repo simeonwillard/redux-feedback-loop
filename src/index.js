@@ -8,6 +8,7 @@ import {createStore, combineReducers, applyMiddleware} from 'redux';
 import logger from 'redux-logger';
 
 
+
 const formsReducer = (state = [], action) => {
     switch (action.type) {
         case 'FEEDBACK':

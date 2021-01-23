@@ -3,18 +3,13 @@ import { useHistory } from 'react-router-dom';
 import axios from 'axios';
 
 
-function ReviewFeedback() {
+function ReviewFeedback({dataToSend}) {
 
     const history = useHistory();
     const feedback = useSelector(state => state.formsReducer);
     console.log(feedback);
 
-    const dataToSend = {
-        feeling: feedback[0].feeling,
-        understanding: feedback[1].understanding,
-        support: feedback[2].supported,
-        comments: feedback[3].comments
-    }
+    
 
     const sendFeedback = () => {
         //post to db
