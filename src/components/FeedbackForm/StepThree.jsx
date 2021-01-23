@@ -9,14 +9,17 @@ function StepThree() {
 
     const [supported, setSupported] = useState(0);
 
-
     const handleClick = (event) => {
         event.preventDefault();
 
-        const thirdPage = { supported };
-        dispatch({ type: 'FEEDBACK', payload: thirdPage });
+        if (supported > 0 && supported < 6) {
+            const thirdPage = { supported };
+            dispatch({ type: 'FEEDBACK', payload: thirdPage });
 
-        history.push('/step-four');
+            history.push('/step-four');
+        } else {
+            alert('please enter on a scale of 1 to 5');
+        }
     }
 
     return (

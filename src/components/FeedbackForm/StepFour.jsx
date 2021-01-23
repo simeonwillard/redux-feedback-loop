@@ -7,7 +7,7 @@ function StepFour() {
     const dispatch = useDispatch();
     const history = useHistory();
 
-    const [comments, setComments] = useState(0);
+    const [comments, setComments] = useState('none');
 
 
     const handleClick = (event) => {

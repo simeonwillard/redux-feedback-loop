@@ -13,10 +13,14 @@ function StepOne() {
     const handleClick = (event) => {
         event.preventDefault();
 
-        const firstPage = { feeling };
-        dispatch({ type: 'FEEDBACK', payload: firstPage });
+        if (feeling > 0 && feeling < 6) {
+            const firstPage = { feeling };
+            dispatch({ type: 'FEEDBACK', payload: firstPage });
 
-        history.push('/step-two');
+            history.push('/step-two');
+        } else {
+            alert('please enter on a scale of 1 to 5');
+        }
     }
 
     return (
