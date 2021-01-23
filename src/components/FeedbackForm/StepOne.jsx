@@ -14,7 +14,7 @@ function StepOne() {
         event.preventDefault();
 
         const firstPage = { feeling };
-        dispatch({ type: 'STEP_ONE', payload: firstPage });
+        dispatch({ type: 'FEEDBACK', payload: firstPage });
 
         history.push('/step-two');
     }

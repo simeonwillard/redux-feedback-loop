@@ -14,7 +14,7 @@ function StepThree() {
         event.preventDefault();
 
         const thirdPage = { supported };
-        dispatch({ type: 'STEP_THREE', payload: thirdPage });
+        dispatch({ type: 'FEEDBACK', payload: thirdPage });
 
         history.push('/step-four');
     }

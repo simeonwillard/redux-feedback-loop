@@ -4,6 +4,7 @@ import './App.css';
 import { HashRouter as Router, Route, Link } from 'react-router-dom';
 
 import FeedbackForm from '../FeedbackForm/FeedbackForm';
+import ReviewFeedback from '../ReviewFeedback/ReviewFeedback';
 
 function App() {
 
@@ -17,6 +18,9 @@ function App() {
         <Router>
             <Route path="/">
               <FeedbackForm />
+            </Route>
+            <Route path="/review">
+              <ReviewFeedback />
             </Route>
         </Router>
       </div>

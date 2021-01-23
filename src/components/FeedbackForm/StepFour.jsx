@@ -14,9 +14,9 @@ function StepFour() {
         event.preventDefault();
 
         const fourthPage = { comments };
-        dispatch({ type: 'STEP_THREE', payload: fourthPage });
+        dispatch({ type: 'FEEDBACK', payload: fourthPage });
 
-        history.push('/step-five');
+        history.push('/review');
     }
 
     return (

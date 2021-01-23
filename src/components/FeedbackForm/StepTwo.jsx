@@ -14,7 +14,7 @@ function StepTwo() {
         event.preventDefault();
 
         const secondPage = { understanding };
-        dispatch({ type: 'STEP_TWO', payload: secondPage });
+        dispatch({ type: 'FEEDBACK', payload: secondPage });
 
         history.push('/step-three');
     }

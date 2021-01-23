@@ -10,17 +10,8 @@ import logger from 'redux-logger';
 
 const formsReducer = (state = [], action) => {
     switch (action.type) {
-        case 'STEP_ONE':
-            return action.payload;
-        
-        case 'STEP_TWO':
-            return action.payload;
-            
-        case 'STEP_THREE':
-            return action.payload;
-        
-        case 'STEP_FOUR':
-            return action.payload;
+        case 'FEEDBACK':
+            return [...state, action.payload];
 
         default:
             return state;
