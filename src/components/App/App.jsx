@@ -5,6 +5,7 @@ import { HashRouter as Router, Route, Link } from 'react-router-dom';
 
 import FeedbackForm from '../FeedbackForm/FeedbackForm';
 import ReviewFeedback from '../ReviewFeedback/ReviewFeedback';
+import Submitted from '../Submitted/Submitted';
 
 function App() {
 
@@ -21,6 +22,9 @@ function App() {
             </Route>
             <Route path="/review">
               <ReviewFeedback />
+            </Route>
+            <Route path="/submit">
+              <Submitted />
             </Route>
         </Router>
       </div>

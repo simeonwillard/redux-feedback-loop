@@ -3,26 +3,36 @@ import { useHistory } from 'react-router-dom';
 import axios from 'axios';
 
 
-
 function ReviewFeedback() {
 
     const history = useHistory();
     const feedback = useSelector(state => state.formsReducer);
     console.log(feedback);
 
-    const updateDB = () => {
+    const dataToSend = {
+        feeling: feedback[0].feeling,
+        understanding: feedback[1].understanding,
+        support: feedback[2].supported,
+        comments: feedback[3].comments
+    }
+
+    const sendFeedback = () => {
+        //post to db
         axios
-        .put
+            .post('/feedback', dataToSend)
+            .then(response => {
+                history.push('/submit');
+            })
+            .catch(error => {
+                console.log('error in posting feedback', error);
+            });
     }
 
 
     const handleClick = () => {
         console.log('clicked submit');
-
-        //put
-
-        history.push('/submit');
-
+        sendFeedback();
+        console.log(dataToSend);
     }
 
 
