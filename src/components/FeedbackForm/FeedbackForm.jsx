@@ -6,8 +6,6 @@ import StepFour from "./StepFour";
 
 import { HashRouter as Router, Route, Link } from 'react-router-dom';
 import { useHistory } from 'react-router-dom';
-import axios from 'axios';
-// import {useEffect} from 'react';
 
 
 
@@ -17,7 +15,7 @@ function FeedbackForm() {
 
     history.push('/step-one');
 
-    
+
     return (
         <Router>
             <div>
